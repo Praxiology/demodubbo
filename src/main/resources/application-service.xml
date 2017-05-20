@@ -13,6 +13,7 @@
 
     <!-- 注解包扫描位置: -->
    <!--  <context:component-scan base-package="com.step.dubbo.server.*" /> -->
+    <bean id="MyServiceImpl" class="com.step.dubbo.server.MyServiceImpl"/>
 
     <!-- 接入dubbo的应用程序名称 -->
     <dubbo:application name="ws-server" />
@@ -27,6 +28,7 @@
         声明需要暴露的服务接口，
         请注意ref属性中指定的MyService接口实现类，它并没有在xml文件中定义，而是使用注解的方式在class中定义
      -->
-    <bean id="MyServiceImpl" class="com.step.dubbo.server.MyServiceImpl"/>
+
     <dubbo:service interface="com.step.dubbo.server.MyService" ref="MyServiceImpl"/>
+
 </beans>

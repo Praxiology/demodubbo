@@ -19,7 +19,7 @@ public class ClientMain {
     	ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext(new String[]{path});
         // 开始RPC调用
        MyService myService = (MyService)app.getBean("MyServiceImpl");
-       System.out.println(myService.doMyTest("123", "345"));
+       System.out.println(myService.doMyTest("123rrr", "345"));
        while(true){
 			if(!app.isActive()){
 				app.start();
